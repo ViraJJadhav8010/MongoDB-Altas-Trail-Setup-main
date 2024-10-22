@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Space Rental - Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #003366;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            font-size: 20px;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        .navbar .request-btn {
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .request-btn i {
+            margin-right: 5px;
+        }
+
+        .navbar .request-btn:hover {
+            background-color: #16a085;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #fff;
+            height: 100vh;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+        }
+
+        .sidebar .user-logo {
+            width: 80px;
+            height: 80px;
+            background-color: #003366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .user-logo i {
+            color: white;
+            font-size: 40px;
+        }
+
+        .sidebar h3 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .storage-table {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin-top: 30px;
+        }
+
+        .storage-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .storage-table table th,
+        .storage-table table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .storage-table table th {
+            background-color: #f1f1f1;
+        }
+
+        .storage-table table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .storage-table h3 {
+            margin-bottom: 15px;
+            color: #003366;
+        }
+
+        .btn-primary {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #00284d;
+        }
+
+    </style>
+    <!-- Add Font Awesome for user logo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Disk Space Rental</h1>
+        <button class="request-btn">
+            <i class="fa fa-paper-plane"></i> Disk Space Request
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- User Logo -->
+        <div class="user-logo">
+            <i class="fa fa-user"></i>
+        </div>
+        <h3>Dinesh</h3>
+        <ul>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fa fa-folder"></i> Files</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <button class="btn-primary">Storage</button>
+        <div class="storage-table">
+            <h3>Storage</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Storage</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>5.0 MB</td>
+                        <td>$50.0</td>
+                        <td>29-04-2023</td>
+                        <td>Allocated</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>5.0 MB</td>
+                        <td>$50.0</td>
+                        <td>29-04-2023</td>
+                        <td>Waiting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

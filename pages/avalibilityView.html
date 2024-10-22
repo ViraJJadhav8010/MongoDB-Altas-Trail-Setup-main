@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Space Rental</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 20%;
+            background-color: #003366; /* Updated Sidebar Color */
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding-top: 20px;
+        }
+
+        nav ul li {
+            margin: 20px 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #00ccff; /* Updated Hover Color */
+        }
+
+        /* Main Content */
+        .content {
+            width: 80%;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #00ccff; /* Updated Header Color */
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            color: #003366;
+        }
+
+        .send-btn {
+            background-color: #00ccff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .send-btn:hover {
+            background-color: #0099cc;
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        /* Data Owner Section */
+        .data-owner {
+            width: 45%;
+            background-color: #f0f2f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-owner h2 {
+            color: #003366;
+            margin-bottom: 15px;
+        }
+
+        .chart img {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Upload File Section */
+        .upload-file {
+            width: 45%;
+            background-color: #f0f2f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-file h3 {
+            margin-bottom: 15px;
+            color: #003366;
+        }
+
+        .upload-file label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .upload-file input[type="text"], 
+        .upload-file input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .upload-btn {
+            background-color: #00ccff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .upload-btn:hover {
+            background-color: #0099cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="profile-icon.png" alt="Profile" class="profile-img">
+                <p>Raj</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <header class="header">
+                <h1>Disk Space Rental</h1>
+                <button class="send-btn">Send</button>
+            </header>
+            <section class="dashboard">
+                <div class="data-owner">
+                    <h2>Welcome To Data Owner</h2>
+                    <p><strong>Name:</strong> Raj</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>D.O.B:</strong> 1998-04-05</p>
+                    <p><strong>Mobile:</strong> 9632587415</p>
+                    <p><strong>Email:</strong> rajowner@gmail.com</p>
+                    <div class="chart">
+                        <!-- Placeholder for chart -->
+                        <img src="chart-placeholder.png" alt="Chart">
+                    </div>
+                </div>
+
+                <div class="upload-file">
+                    <h3>Upload File</h3>
+                    <form>
+                        <label for="description">Description</label>
+                        <input type="text" id="description" name="description">
+                        
+                        <label for="file">Select File</label>
+                        <input type="file" id="file" name="file">
+                        
+                        <button type="submit" class="upload-btn">Upload</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

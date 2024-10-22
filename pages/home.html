@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Space Rental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #003366;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            font-size: 20px;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #1abc9c;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-buttons button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #16a085;
+        }
+
+        .container {
+            margin: 30px;
+        }
+
+        h2 {
+            color: #003366;
+        }
+
+        .price-list {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        .price-list th, .price-list td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .price-list th {
+            background-color: #003366;
+            color: white;
+        }
+
+        .price-list td {
+            background-color: #f9f9f9;
+        }
+
+        .right-section {
+            width: 25%;
+            margin-left: auto;
+            background-color: #003366;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .right-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .right-section button {
+            padding: 10px 20px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .right-section button:hover {
+            background-color: #16a085;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+        </div>
+        <h1>Disk Space Rental</h1>
+        <div class="nav-buttons">
+            <button>Home</button>
+            <button>Data Owner</button>
+            <button>CSP</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Disk Space Rental Price List</h2>
+        <table class="price-list">
+            <tr>
+                <th>#</th>
+                <th>Storage</th>
+                <th>Price</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>100.0 MB</td>
+                <td>1000.0</td>
+                <td>3 months</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>50.0 MB</td>
+                <td>500.0</td>
+                <td>2 months</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>30.0 MB</td>
+                <td>300.0</td>
+                <td>1 month</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>10.0 MB</td>
+                <td>100.0</td>
+                <td>1 month</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>5.0 MB</td>
+                <td>50.0</td>
+                <td>1 month</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="right-section">
+        <h3>Disk Space Rental System</h3>
+        <p>Provide Space for Data Owners</p>
+        <button>Storage Request</button>
+    </div>
+
+</body>
+</html>

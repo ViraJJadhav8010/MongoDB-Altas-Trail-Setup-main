@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Space Rental - Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #003366;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            font-size: 20px;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #fff;
+            height: 100vh;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+        }
+
+        .sidebar .user-logo {
+            width: 80px;
+            height: 80px;
+            background-color: #003366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .user-logo i {
+            color: white;
+            font-size: 40px;
+        }
+
+        .sidebar h3 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* For horizontal spacing */
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .stats-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 25%; /* Adjust width for better layout */
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats-card h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .stats-card .used-space {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .stats-card .total-space,
+        .stats-card .used-value {
+            color: #1abc9c;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .files-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .files-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .files-container table th,
+        .files-container table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .files-container table th {
+            background-color: #f1f1f1;
+        }
+
+        .files-container table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .action-links {
+            color: blue;  /* Set the color to blue */
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .action-links:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Disk Space Rental</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- User Logo -->
+        <div class="user-logo">
+            <i class="fa fa-user"></i>
+        </div>
+        <h3>Raj</h3>
+        <ul>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fa fa-folder"></i> Files</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <div class="stats-card">
+                <h3>Total</h3>
+                <p class="total-space">10.0 MB</p>
+                <p>Total Disk Space</p>
+            </div>
+            <div class="stats-card">
+                <h3>Used</h3>
+                <p class="used-space">31.99%</p>
+                <p class="used-value">3.199 MB</p>
+            </div>
+        </div>
+
+        <!-- Files Section -->
+        <div class="files-container">
+            <h3>Uploaded Files</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>File</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>F2bb1.jpg (Image)</td>
+                        <td>0.007 MB</td>
+                        <td>29-04-2023</td>
+                        <td>
+                            <a href="#" class="action-links">Download</a>
+                            <a href="#" class="action-links">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>F1heart_data.csv (Data)</td>
+                        <td>3.192 MB</td>
+                        <td>29-04-2023</td>
+                        <td>
+                            <a href="#" class="action-links">Download</a>
+                            <a href="#" class="action-links">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
