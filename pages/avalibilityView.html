@@ -159,6 +159,7 @@
     </style>
 </head>
 <body>
+    <form action="/api/users" method="POST" id="add_user">
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -204,11 +205,12 @@
                         <label for="file">Select File</label>
                         <input type="file" id="file" name="file">
                         
-                        <a href="fileView.html" class="upload-btn">Upload</a>
+                        <a button type="submit" href="fileView.html" class="upload-btn">Upload</a>
                     </form>
                 </div>
             </section>
         </main>
     </div>
+    </form>
 </body>
 </html>

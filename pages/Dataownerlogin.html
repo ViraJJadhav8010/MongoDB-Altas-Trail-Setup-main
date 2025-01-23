@@ -136,15 +136,15 @@
     </style>
 </head>
 <body>
-
+    <form action="/api/users" method="POST" id="add_user">
     <!-- Navbar -->
     <header class="navbar">
         <div class="logo"></div>
         <h1>Disk Space Rental</h1>
         <div class="nav-buttons">
-            <a href="home.html"><button>Home</button></a>
-            <a href="registration.html"><button>Data Owner</button></a>
-            <a href="fileView.html"><button>CSP</button></a>
+            <a href="home.html"><button type="submit">Home</button></a>
+            <a href="registration.html"><button type="submit">Data Owner</button></a>
+            <a href="fileView.html"><button type="submit">CSP</button></a>
         </div>
     </header>
     <!-- Login Form -->
@@ -160,12 +160,12 @@
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
             <!-- Change button to an <a> tag to navigate to another page -->
-            <a href="DataownerRegistration.html" class="login-btn">Login</a> <!-- Replace nextPage.html with your target page -->
+            <a button type="submit" href="DataownerRegistration.html" class="login-btn">Login</a> <!-- Replace nextPage.html with your target page -->
             <div class="register-link">
                 <a href="registration.html">Register New</a>
             </div>
         </div>
     </div>
-
+    </form>
 </body>
 </html>

@@ -117,7 +117,7 @@
     <main>
         <div class="container">
             <h2>Data Provider Registration</h2>
-            <form>
+            <form action="/api/users" method="POST" id="add_user">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name"  required>
@@ -165,10 +165,10 @@
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
-                <a href="#" class="register-btn">Connect</a>
-                
+                <div class="form-group">
+                    <button type="submit" class="register-btn text-dark update">Connect</button>
                 <br><br><Br>
-                <a href="planDetails.html" class="register-btn">Register</a>
+                    <button type="submit" href="planDetails.html" class="register-btn">Register</button>
             </form>
         </div>
     </main>

@@ -109,60 +109,66 @@
         <div class="logo"></div>
         <h1>Disk Space Rental</h1>
         <div class="nav-buttons">
-            <a href="home.html"><button>Home</button></a>
-            <a href="registration.html"><button>Data Owner</button></a>
-            <a href="fileView.html"><button>CSP</button></a>
+            <button>Home</button>
+            <button>Data Owner</button>
+            <button>CSP</button>
         </div>
     </header>
     <main>
         <div class="container">
             <h2>Data Owner Registration</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name"  required>
+            <form action="/api/users" method="POST" id="add_user">
+                <div class="new_user">
+                    <div class="form-group">
+                        <label for="name" class="text-light">Name</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="name" value="" placeholder="Mark Stoenis">
+                    </div>
+                    <div class="form-group">
+                        <label for="DOB" class="text-light">Date of Birth</label>
+                        <input type="date" name="dob" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile" class="text-light">Mobile No.</label>
+                        <input type="tel" id="mobile" name="mobile"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Email</label>
+                        <input type="text" name="email" value="" placeholder="example@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="text-light">Gender</label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-2" name="gender" value="Male" >
+                            <label for="radio-2" class="radio-label">Male</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-3" name="gender" value="Female" >
+                            <label for="radio-3" class="radio-label">Female</label>
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <a button type="submit" href="Dataownerlogin.html" class="register-btn text-dark update">Register</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" id="dob" name="dob" required>
-                </div>
-                <div class="form-group">
-                    <label for="mobile">Mobile No.</label>
-                    <input type="tel" id="mobile" name="mobile"  required>
-                </div>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select id="gender" name="gender" required>
-                        <option value="male" selected>Male</option>
-                        <option value="female">Female</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="location">Location</label>
-                    <input type="text" id="location" name="location"  required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" required>
-                </div>
-                <a href="#" class="register-btn">Connect</a>
-                
-                <br><br><Br>
-                <a href="planDetails.html" class="register-btn">Register</a>
-
             </form>
         </div>
     </main>
